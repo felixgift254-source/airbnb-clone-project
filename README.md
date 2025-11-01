@@ -49,7 +49,7 @@ A user-friendly design is critical for a booking platform because it directly im
 
 
 
-Color styles (named tokens + hex + usage)
+Color styles 
 - --color-primary: #FF5A5F — Primary brand/accent (calls-to-action, primary buttons, links)
 - --color-primary-600: #E04F52 — Hover / active state
 - --color-accent: #00A699 — Secondary accent (highlights, success accents)
