@@ -1,12 +1,10 @@
 # airbnb-clone-project
-This project is a full-stack clone of the popular accommodation booking platform AirBnB. The goal is to build a functional web application that allows users to browse property listings, view detailed property information, and complete bookings. The project will cover frontend development, backend APIs, database design, and deployment
+This project is a full-stack clone of the popular accommodation booking platform AirBnB. The goal is to build a functional web application that allows users to browse property listings, view detailed pages, and complete bookings in a secure and user-friendly way.
 
 Tech Stack
 Frontend: HTML, CSS, JavaScript (React or similar framework)
 Version Control: Git and GitHub
 Design Tools: Figma for UI/UX design
-
-
 
 
 
@@ -35,15 +33,15 @@ Design Tools: Figma for UI/UX design
 
 ### Primary Pages
 
-| Page                  | Purpose                                                                                   | Key UI Elements                                                                                                                                               |
-|-----------------------|-------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Property Listing View | Let users browse available properties matching their search and filter criteria.           | Search bar, filters (location, dates, price, amenities), result count, listing cards (image, title, rating, price per night), pagination/infinite scroll, map toggle. |
-| Listing Detailed View | Provide comprehensive information about a selected property so users can make decisions.   | Image gallery, title & summary, price breakdown, availability calendar, booking sidebar with date selector and total price, host info, reviews, location map, amenity list, clear "Book" CTA. |
-| Simple Checkout View  | Guide users through confirming a booking with minimal steps and clear cost transparency.   | Booking summary (dates, nights, per-night price), guest info form, contact details, payment placeholder, final confirmation button, cancellation policy, order summary, success confirmation screen. |
+| Page                  | Purpose                                                                                   | Key UI Elements                                                               |
+|-----------------------|-------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+| Property Listing View | Let users browse available properties matching their search and filter criteria.           | Search bar, filters (location, dates, price, amenities), result count, listing cards |
+| Listing Detailed View | Provide comprehensive information about a selected property so users can make decisions.   | Image gallery, title & summary, price breakdown, availability calendar, booking CTA |
+| Simple Checkout View  | Guide users through confirming a booking with minimal steps and clear cost transparency.   | Booking summary (dates, nights, per-night price), guest info form, contact details |
 
 ### Why User-Friendly Design Matters in a Booking System
 
-A user-friendly design is critical for a booking platform because it directly impacts conversion rates and customer trust. Booking is often a high-friction moment: users may abandon the process if they cannot quickly find availability, understand total costs, or feel confident about safety and payment. Clear layouts, consistent affordances (buttons, inputs), informative error messages, and transparent pricing reduce confusion and friction. Additionally, responsive and accessible design broadens the user base, ensuring people on different devices and with different abilities can complete bookings reliably. Good UI/UX also reduces support requests and increases repeat bookings by creating a smooth, trustworthy experience.
+A user-friendly design is critical for a booking platform because it directly impacts conversion rates and customer trust. Booking is often a high-friction moment: users may abandon the process if the flow is confusing, slow, or uncertain.
 
 ---
 
@@ -129,4 +127,46 @@ Why identifying design properties of a mockup matters (concise)
 - Performance: Limits fonts/weights to those actually used, reducing payload.
 - Maintainability: Single source of truth (variables/tokens) reduces duplicated values and bugs.
 - Clear UX hierarchy: Defined sizes and weights create predictable visual rhythm and scanning patterns.
+- 
 
+
+## Project Roles and Responsibilities
+
+This section outlines the core roles on the project and their primary responsibilities. Clear role definitions help ensure accountability, faster delivery, and a high-quality product.
+
+- Project Manager
+  - Key responsibilities: Plan and track project timelines, coordinate cross-team work, manage risks and dependencies, communicate progress to stakeholders, and remove blockers for the team.
+  - Contribution: Keeps the project on schedule and aligned with business goals, enabling teams to focus on delivery.
+
+- Product Owner
+  - Key responsibilities: Define and prioritize the product backlog, write and refine user stories/acceptance criteria, decide on feature priorities, and represent customer and business needs.
+  - Contribution: Ensures the team builds the right product by providing clear priorities and acceptance criteria.
+
+- Scrum Master
+  - Key responsibilities: Facilitate Agile ceremonies (standups, sprint planning, retrospectives), coach the team on Scrum practices, remove impediments, and protect the team from external interruptions.
+  - Contribution: Improves team productivity and process health, helping deliver predictable value each sprint.
+
+- Frontend Developers
+  - Key responsibilities: Implement UI components, build responsive layouts, integrate with APIs, ensure accessibility, write unit and integration tests for UI, and optimize performance.
+  - Contribution: Deliver a usable, performant, and accessible user experience that matches the design.
+
+- Backend Developers
+  - Key responsibilities: Design and implement APIs, manage data models and database schema, handle authentication/authorization, enforce business logic, and write backend tests.
+  - Contribution: Provide reliable, secure, and scalable server-side functionality that powers the frontend.
+
+- Designers (UI/UX)
+  - Key responsibilities: Create user flows, wireframes, high-fidelity mockups, design system tokens, and handoff assets; run usability testing and iterate on designs.
+  - Contribution: Provide a clear, accessible, and delightful user interface that guides implementation and reduces rework.
+
+- QA / Testers
+  - Key responsibilities: Define test plans, write and execute test cases (manual and automated), report and verify bugs, and ensure feature acceptance criteria are met.
+  - Contribution: Maintain product quality by catching regressions and preventing defects from reaching users.
+
+- DevOps Engineers
+  - Key responsibilities: Configure CI/CD pipelines, manage infrastructure (IaC), monitor application health and logs, automate deployments, and manage environments (staging/production).
+  - Contribution: Ensure reliable deployments, scalable infrastructure, and effective monitoring so the team can ship with confidence.
+
+Notes on collaboration
+- Cross-functional pairing: Encourage designers, frontend, and backend developers to pair early on complex features to reduce misunderstandings.
+- Shared ownership: While roles have primary responsibilities, encourage shared ownership of quality and product outcomes across the team.
+- Communication: Regular demos, backlog grooming, and clear acceptance criteria help reduce rework and align expectations.
