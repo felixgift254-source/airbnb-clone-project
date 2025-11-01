@@ -170,3 +170,67 @@ Notes on collaboration
 - Cross-functional pairing: Encourage designers, frontend, and backend developers to pair early on complex features to reduce misunderstandings.
 - Shared ownership: While roles have primary responsibilities, encourage shared ownership of quality and product outcomes across the team.
 - Communication: Regular demos, backlog grooming, and clear acceptance criteria help reduce rework and align expectations.
+
+- ## UI Component Patterns
+
+Below is a list of planned reusable UI components for the project with descriptions, purpose, suggested props, and accessibility notes.
+
+### Navbar
+- Description: A responsive navigation bar with the application logo and links to primary pages (Home, Explore, Bookings, Host, Profile).
+- Purpose: Provide clear, consistent navigation across the application.
+- Suggested Props: `links` (array of { label, href }), `logo` (string or component), `user` (object | null)
+- Notes: Implement keyboard navigation, ARIA landmarks (role="navigation"), and an accessible mobile menu (ARIA-expanded on toggles).
+
+### Property Card
+- Description: A card component that displays a property's thumbnail, title, brief description, location, price per night, and rating.
+- Purpose: Surface key property details in listing grids and search results.
+- Suggested Props: `id` (string), `image` (string), `title` (string), `location` (string), `price` (number | string), `rating` (number), `onClick` (function)
+- Notes: Use meaningful alt text for images, include focus states, and ensure the card is keyboard actionable.
+
+### Footer
+- Description: A site footer containing informational links, social links, and legal text.
+- Purpose: Offer secondary navigation and application information.
+- Suggested Props: `links` (array), `social` (array), `copyright` (string)
+- Notes: Keep content readable on small screens and avoid overlapping fixed positioning with main content.
+
+### Search Bar
+- Description: A search input with optional location, date, and guest controls.
+- Purpose: Enable users to quickly find properties matching criteria.
+- Suggested Props: `value` (string), `onChange` (function), `onSearch` (function), `placeholder` (string)
+- Notes: Provide clear labels, ARIA attributes, and suggested auto-complete where relevant.
+
+### Filters Panel
+- Description: A panel or drawer that exposes filtering options (price range, property type, amenities, rating).
+- Purpose: Help users narrow down listing results.
+- Suggested Props: `filters` (object), `onFilterChange` (function), `onApply` (function), `onClear` (function)
+- Notes: Ensure controls (checkboxes, selects) are keyboard navigable and screen-reader friendly.
+
+### Property Details Modal
+- Description: A modal dialog that shows a gallery, full description, amenities, host info, and booking CTA for a property.
+- Purpose: Provide an in-depth view of a property without leaving the listing context.
+- Suggested Props: `property` (object), `isOpen` (boolean), `onClose` (function)
+- Notes: Trap focus when open, return focus on close, and label the dialog with aria-labelledby.
+
+### Booking Form
+- Description: A form collecting reservation dates, guest count, payment details, and contact information.
+- Purpose: Facilitate completed bookings and validate required inputs.
+- Suggested Props: `propertyId` (string), `onSubmit` (function), `initialValues` (object)
+- Notes: Provide inline validation, associate labels with inputs, and ensure secure handling of payment fields.
+
+### Rating Stars
+- Description: A visual and interactive star-rating component used to display or collect ratings.
+- Purpose: Surface user feedback on properties and allow rating interactions.
+- Suggested Props: `rating` (number), `max` (number, default 5), `onRate` (function)
+- Notes: Make rating keyboard-accessible and include an accessible label announcing the rating value.
+
+### Pagination Controls
+- Description: Navigational controls for paginated listing results (previous/next, page numbers).
+- Purpose: Allow users to move between pages of results.
+- Suggested Props: `currentPage` (number), `totalPages` (number), `onPageChange` (function)
+- Notes: Provide aria-current for the active page and ensure controls are reachable by keyboard.
+
+### User Profile Menu
+- Description: A dropdown menu for user account actions (Profile, Trips, Settings, Logout).
+- Purpose: Centralize account-related navigation and actions.
+- Suggested Props: `user` (object), `onSelect` (function), `onLogout` (function)
+- Notes: Ensure the menu is dismissible by Escape and clicking outside, and that it manages focus appropriately.
